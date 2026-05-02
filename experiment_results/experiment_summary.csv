@@ -1,0 +1,15 @@
+stage,accuracy
+"Baseline
+(Level 1)",85.45006165228114
+"Exp A
+(LR)",85.94327990135635
+"Exp B
+(Augment)",86.80641183723797
+"Exp C
+(Scheduler)",86.06658446362515
+"Exp D
+(Epochs)",87.17632552404439
+"Exp E
+(LabelSmooth)",86.80641183723797
+"Exp F
+(Diff LR)",86.68310727496917

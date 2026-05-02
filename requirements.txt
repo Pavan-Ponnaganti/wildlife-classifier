@@ -1,0 +1,10 @@
+streamlit
+torch
+torchvision
+wikipedia
+timm
+matplotlib
+seaborn
+scikit-learn
+pandas
+transformers>=4.35

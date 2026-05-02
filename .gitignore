@@ -1,0 +1,22 @@
+# Dataset — too large for git (download from Kaggle)
+dataset/
+
+# Trained model weights — regenerate with train.py
+*.pth
+
+# CLIP feature cache — regenerate with clip_pipeline.py
+clip_results/cache/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db

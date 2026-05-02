@@ -1,0 +1,6 @@
+method,test_acc
+CLIP Zero-Shot (1 prompt),92.60172626387177
+CLIP Prompt Ensemble,92.97163995067818
+CLIP Linear Probe,95.80764488286067
+Ensemble (CLIP Probe + EffNet),96.30086313193587
+Ensemble + TTA,94.94451294697905

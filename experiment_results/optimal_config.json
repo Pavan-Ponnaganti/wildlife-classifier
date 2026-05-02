@@ -1,0 +1,8 @@
+{
+  "lr": 0.001,
+  "augmentation": "grayscale",
+  "scheduler": "steplr",
+  "epochs": 15,
+  "label_smoothing": 0.0,
+  "diff_lr": false
+}
