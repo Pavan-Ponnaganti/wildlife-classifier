@@ -22,6 +22,7 @@ import os
 import json
 import time
 import pickle
+import joblib
 import numpy as np
 import torch
 import torch.nn as nn
@@ -404,6 +405,11 @@ def main():
     print(f"  Test accuracy: {lp_acc:.2f}%  (Δ vs zero-shot = {lp_acc-zs_acc:+.2f}%)")
     results["CLIP\nLinear\nProbe"] = lp_acc
 
+    # Save probe for use in app.py
+    probe_path = os.path.join(RESULTS_DIR, "linear_probe.joblib")
+    joblib.dump(probe, probe_path)
+    print(f"  Probe saved → {probe_path}")
+
     # ── Step 4: Ensemble CLIP probe + EfficientNet ─────────────────────────────
     print("\n── Step 4: Ensemble (CLIP Linear Probe + EfficientNet) ──────────────")
     effnet = load_efficientnet(num_classes)
@@ -423,6 +429,12 @@ def main():
         print(f"  Ensemble val={val_ens_acc:.2f}%  test={ens_acc:.2f}%  "
               f"(Δ vs EfficientNet alone = {ens_acc-effnet_test_acc:+.2f}%)")
         results["Ensemble\n(CLIP Probe\n+ EffNet)"] = ens_acc
+
+        # Save ensemble weight for use in app.py
+        weight_path = os.path.join(RESULTS_DIR, "ensemble_weight.json")
+        with open(weight_path, "w") as f:
+            json.dump({"clip_weight": best_w, "effnet_weight": round(1 - best_w, 2)}, f)
+        print(f"  Ensemble weight saved → {weight_path}")
     else:
         effnet_test_acc = 0.0
         ens_probs = lp_probs
