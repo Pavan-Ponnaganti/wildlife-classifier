@@ -2,7 +2,7 @@
 dataset/
 
 # Trained model weights — regenerate with train.py
-*.pth
+#*.pth
 
 # CLIP feature cache — regenerate with clip_pipeline.py
 clip_results/cache/
