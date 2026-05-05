@@ -1,6 +1,18 @@
 # Technical Report: Indian Wildlife & Bird Identifier
 
 **Team Members:** Ponnaganti Pavan
+Jay Patel (2025701031)
+
+## Table of Contents
+
+1. [Introduction](#1-introduction)
+2. [Dataset](#2-dataset)
+3. [Methodology](#3-methodology)
+4. [Results (Final Model)](#4-results-final-model)
+5. [Ablation Study: How Many Layers Should We Retrain?](#5-ablation-study-how-many-layers-should-we-retrain)
+6. [Additional Experiments: Searching for Further Accuracy Gains](#6-additional-experiments-searching-for-further-accuracy-gains)
+7. [Summary of All Experiments](#7-summary-of-all-experiments)
+8. [References](#8-references)
 
 ## 1. Introduction
 The objective of this project is to develop an automated wildlife identification system capable of classifying 90 different species of animals and birds. Such a system is highly beneficial for ecological monitoring, assisting ecotourists in identifying local wildlife, and raising general biodiversity awareness through an interactive interface.
